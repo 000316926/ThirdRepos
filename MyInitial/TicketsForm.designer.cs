@@ -40,6 +40,7 @@
             this.cmdCalculate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDiscount = new System.Windows.Forms.TextBox();
+            this.chkDiscount2 = new System.Windows.Forms.CheckBox();
             this.grpSection.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,6 +86,7 @@
             this.chkDiscount.TabIndex = 5;
             this.chkDiscount.Text = "Senior / Student";
             this.chkDiscount.UseVisualStyleBackColor = true;
+            this.chkDiscount.CheckedChanged += new System.EventHandler(this.chkDiscount_CheckedChanged);
             // 
             // radBalcony
             // 
@@ -156,11 +158,23 @@
             this.txtDiscount.Size = new System.Drawing.Size(100, 20);
             this.txtDiscount.TabIndex = 12;
             // 
+            // chkDiscount2
+            // 
+            this.chkDiscount2.AutoSize = true;
+            this.chkDiscount2.Location = new System.Drawing.Point(263, 95);
+            this.chkDiscount2.Name = "chkDiscount2";
+            this.chkDiscount2.Size = new System.Drawing.Size(73, 17);
+            this.chkDiscount2.TabIndex = 13;
+            this.chkDiscount2.Text = "Child < 12";
+            this.chkDiscount2.UseVisualStyleBackColor = true;
+            this.chkDiscount2.CheckedChanged += new System.EventHandler(this.chkDiscount2_CheckedChanged);
+            // 
             // TicketsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 445);
+            this.Controls.Add(this.chkDiscount2);
             this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmdCalculate);
@@ -194,6 +208,7 @@
         private System.Windows.Forms.Button cmdCalculate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDiscount;
+        private System.Windows.Forms.CheckBox chkDiscount2;
     }
 }
 

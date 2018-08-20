@@ -30,7 +30,7 @@ namespace Ticketing
         {
             mQuantity = int.Parse(txtQuantity.Text);
             
-            if (chkDiscount.Checked)
+            if (chkDiscount.Checked || chkDiscount2.Checked)
                 { mDiscount = true; }
 
             if (radBalcony.Checked)
@@ -45,5 +45,17 @@ namespace Ticketing
             mTicketPrice.calculatePrice();
             lblAmount.Text = System.Convert.ToString(mTicketPrice.AmountDue);
         }
-     }
+
+        private void chkDiscount_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkDiscount.Checked)
+                chkDiscount2.Checked = false;
+        }
+
+        private void chkDiscount2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkDiscount2.Checked)
+                chkDiscount.Checked = false;
+        }
+    }
 }
